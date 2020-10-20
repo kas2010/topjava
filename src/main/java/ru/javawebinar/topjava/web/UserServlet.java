@@ -8,8 +8,16 @@ import java.io.IOException;
 
 public class UserServlet extends HttpServlet {
 
-    @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.getRequestDispatcher("/users.jsp").forward(request, response);
-    }
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	@Override
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+//	        request.getRequestDispatcher("/users.jsp").forward(request, response);
+		response.sendRedirect("users.jsp");
+	}
+
 }
